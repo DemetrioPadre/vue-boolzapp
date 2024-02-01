@@ -1,0 +1,43 @@
+body {
+    padding: 50px;
+    height: 100px;
+}
+
+/* container principale */
+#container {
+    border: 1px solid red;
+    width: 1200px;
+    height: 80vh;
+
+    display: flex;
+    justify-content: center;
+
+}
+
+
+
+/* dashboard chat */
+
+.col-4,
+.col-8 {
+    border: 1px solid blue;
+    height: 80vh;
+}
+
+.chat {
+    height: 50px;
+    border: 1px dashed black;
+}
+
+.search {
+    height: 30px;
+    border: 1px dashed black;
+}
+
+.profile {
+    background-color: grey;
+}
+
+.notifiche {
+    background-color: rgba(76, 169, 227, 0.564);
+}
