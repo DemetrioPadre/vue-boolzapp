@@ -1,27 +1,31 @@
 body {
-    padding: 50px;
-    height: 100px;
+    background: linear-gradient(#009688 15%, #dbdbd2 15%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* container principale */
 #container {
     border: 1px solid red;
-    width: 1200px;
-    height: 80vh;
-
+    width: 60vw;
+    height: 90vh;
     display: flex;
     justify-content: center;
-
 }
-
-
-
-/* dashboard chat */
 
 .col-4,
 .col-8 {
     border: 1px solid blue;
-    height: 80vh;
+}
+
+
+/* dashboard chat */
+
+
+.col-4 {
+    background-color: white;
+    /* overflow-y: scroll; */
 }
 
 .chat {
@@ -35,9 +39,51 @@ body {
 }
 
 .profile {
-    background-color: grey;
+    background-color: #eaeaea;
+    display: flex;
+    justify-content: space-between;
 }
 
 .notifiche {
     background-color: rgba(76, 169, 227, 0.564);
+
+}
+
+.sophiaProfile {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.sophiaOption {
+
+    cursor: pointer;
+    display: flex;
+
+    line-height: 50px;
+
+}
+
+.sophiaImg {
+    border-radius: 50%;
+    height: 40px;
+
+}
+
+
+/* right container */
+.col-8 {
+    background-image: url(./img/mine.jpg);
+}
+
+.writeBar {
+    background-color: #f3eeea;
+    height: 50px;
+    margin-top: auto;
+}
+
+.containerChat {
+    border: 1px solid black;
+    height: calc(100% - 100px);
+
 }
