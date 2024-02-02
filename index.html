@@ -32,29 +32,46 @@
         <!-- container  -->
         <div id="container" class="row">
             <!-- inserimento colonne della lista chat -->
-            <div class="col-4">
-                <div class="row chat profile">
+            <div class="col-4 p-0">
+                <div class=" chat profile">
                     <div class="sophiaProfile">
+                        <div>
+                            <img class="sophiaImg" src="./img/avatar_io.jpg" alt="">
+                            <span>Sophia</span>
+                        </div>
 
-                        <img class="sophiaImg" src="./img/avatar_io.jpg" alt="">Sophia
-                    </div>
-                    <div class="sophiaOption">
-                        <i class="fa-solid fa-circle-notch"></i>
-                        <i class="fa-solid fa-message"></i>
-                        <i class="fa-solid fa-ellipsis-vertical"></i>
-                    </div>
+                        <div class="sophiaOption">
+                            <i class="fa-solid fa-circle-notch ms-3 fs-5"></i>
+                            <i class="fa-solid fa-message ms-3 fs-5"></i>
+                            <i class="fa-solid fa-ellipsis-vertical ms-3 fs-5"></i>
 
+                        </div>
+                    </div>
+                </div>
+                <div class="chat notifiche">
+                    <div class="bell ">
+                        <i class="fa-solid fa-bell-slash  "></i>
+                    </div>
+                    <div class=" ">
+                        <p class="m-0 ms-1">Ricevi notifiche di nuovi
+                            messaggi</p>
+                    </div>
 
                 </div>
-                <div class="row chat notifiche"></div>
-                <div class="row chat search"></div>
-                <div class="row chat"></div>
+                <div class="chat search">
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2 searchBar " type="search" placeholder="Search"
+                            aria-label="Search">
+
+                    </form>
+                </div>
+                <div class="chat"></div>
 
             </div>
             <div class="col-8">
-                <div class="row chat profile"></div>
+                <div class=" chat profile"></div>
                 <div class="containerChat "></div>
-                <div class="row writeBar "></div>
+                <div class=" writeBar "></div>
             </div>
 
         </div>

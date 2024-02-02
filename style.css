@@ -44,30 +44,49 @@ body {
     justify-content: space-between;
 }
 
-.notifiche {
-    background-color: rgba(76, 169, 227, 0.564);
-
-}
 
 .sophiaProfile {
     display: flex;
     justify-content: space-between;
+    text-align: center;
 
 }
 
 .sophiaOption {
-
     cursor: pointer;
     display: flex;
-
     line-height: 50px;
-
+    align-items: center;
 }
 
 .sophiaImg {
     border-radius: 50%;
     height: 40px;
 
+}
+
+.notifiche {
+    background-color: rgba(76, 169, 227, 0.564);
+    display: flex;
+    align-items: center;
+
+
+}
+
+
+.bell {
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchBar {
+    height: 20px;
+    width: 100%;
 }
 
 
