@@ -37,7 +37,7 @@
                 <div class="sophiaProfile">
                     <div class="d-flex align-items-center ms-3">
                         <img class="sophiaImg" src="./img/avatar_io.jpg" alt="">
-                        <span>Sophia</span>
+                        <span class="ms-1">Sophia</span>
                     </div>
 
                     <div class="sophiaOption me-3">
@@ -49,33 +49,50 @@
                 </div>
 
                 <div class="chat notifiche">
-                    <div class="bell ">
-                        <i class="fa-solid fa-bell-slash  "></i>
+                    <div class="bell ms-3 ">
+                        <i class="fa-solid fa-bell-slash   "></i>
                     </div>
                     <div class=" ">
-                        <p class="m-0 ms-1">Ricevi notifiche di nuovi
+                        <p class="m-0 ms-2">Ricevi notifiche di nuovi
                             messaggi</p>
-                        <a href="#">attiva notifiche desktop</a>
+                        <a class="ms-2 " href="#">attiva notifiche desktop</a>
                     </div>
 
                 </div>
 
-                <div class=" searchBar">
+                <div class="searchBar">
                     <div class="d-flex justify-content-center barra"><span class="input-group-text rounded-0"
                             id="basic-addon1"><i class="fa-solid fa-magnifying-glass "></i></span>
-                        <input type="text" class="form-control rounded-0" placeholder="Cerca o inizia una nuova chat"
+                        <input type="text" class=" form-control rounded-0" placeholder="Cerca o inizia una nuova chat"
                             aria-label="Username" aria-describedby="basic-addon1">
                     </div>
 
 
                 </div>
 
-                <div class="chatList">
+                <div class="chatList ">
                     <div class="d-flex align-items-center ms-3">
                         <img id="profileImg" src="./img/avatar_1.jpg" alt="">
-                        <span>Michele</span>
+                        <span class="ms-1">Michele</span>
 
                     </div>
+
+                </div>
+                <div class="chatList ">
+                    <div class="d-flex align-items-center ms-3">
+                        <img id="profileImg" src="./img/avatar_1.jpg" alt="">
+                        <span class="ms-1 ">Michele</span>
+
+                    </div>
+
+                </div>
+                <div class="chatList ">
+                    <div class="d-flex align-items-center ms-3">
+                        <img id="profileImg" src="./img/avatar_1.jpg" alt="">
+                        <span class="ms-1">Michele</span>
+
+                    </div>
+
                 </div>
 
             </div>
@@ -83,9 +100,40 @@
 
             <!-- right side -->
             <div class="rightPage p-0">
-                <div class="chatProfile"></div>
-                <div class="containerChat "></div>
-                <div class=" writeBar "></div>
+
+                <!-- header -->
+                <div class="headerChat">
+                    <div class="chatList ">
+                        <div class="d-flex align-items-center ms-3">
+                            <img id="profileImg" src="./img/avatar_1.jpg" alt="">
+                            <span class="ms-1">Michele</span>
+                        </div>
+                    </div>
+                    <div class="currentProfile me-3">
+                        <i class="fa-solid fa-magnifying-glass  ms-3 fs-5"></i>
+                        <i class="fa-solid fa-paperclip ms-3 fs-5"></i>
+                        <i class="fa-solid fa-ellipsis-vertical ms-3 fs-5"></i>
+
+                    </div>
+
+                </div>
+                <!--  chat -->
+                <div class="containerChat ">
+                    <div class="leftMsg"><span>messaggio ricevuto</span></div>
+                    <div class="rightMsg"> <span>hai ricevuto il messaggio?</span></div>
+                </div>
+                <!-- footer -->
+                <div class="footerBar">
+                    <div class="emoticon d-flex align-items-center"><span><i
+                                class="fa-regular fa-face-smile fa-lg"></i></span></div>
+                    <div class="writeBar d-flex align-content-center mt-2"><input type="text" class="form-control"
+                            placeholder="Scrivi un messaggio">
+                    </div>
+                    <div class="microphone d-flex align-items-center"><span><i
+                                class="fa-solid fa-microphone fa-lg "></i></span></div>
+
+                </div>
+
             </div>
 
         </div>
