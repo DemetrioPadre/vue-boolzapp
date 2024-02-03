@@ -30,24 +30,24 @@
     <div id="app">
 
         <!-- container  -->
-        <div id="container" class="row">
+        <div id="container">
             <!-- inserimento colonne della lista chat -->
-            <div class="col-4 p-0">
-                <div class=" chat profile">
-                    <div class="sophiaProfile">
-                        <div>
-                            <img class="sophiaImg" src="./img/avatar_io.jpg" alt="">
-                            <span>Sophia</span>
-                        </div>
+            <div class="leftBar p-0">
 
-                        <div class="sophiaOption">
-                            <i class="fa-solid fa-circle-notch ms-3 fs-5"></i>
-                            <i class="fa-solid fa-message ms-3 fs-5"></i>
-                            <i class="fa-solid fa-ellipsis-vertical ms-3 fs-5"></i>
+                <div class="sophiaProfile">
+                    <div class="d-flex align-items-center ms-3">
+                        <img class="sophiaImg" src="./img/avatar_io.jpg" alt="">
+                        <span>Sophia</span>
+                    </div>
 
-                        </div>
+                    <div class="sophiaOption me-3">
+                        <i class="fa-solid fa-circle-notch ms-3 fs-5"></i>
+                        <i class="fa-solid fa-message ms-3 fs-5"></i>
+                        <i class="fa-solid fa-ellipsis-vertical ms-3 fs-5"></i>
+
                     </div>
                 </div>
+
                 <div class="chat notifiche">
                     <div class="bell ">
                         <i class="fa-solid fa-bell-slash  "></i>
@@ -59,24 +59,31 @@
                     </div>
 
                 </div>
-                <div class="chat search">
 
-
-
-                    <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1"><i
-                                class="fa-solid fa-magnifying-glass"></i></span>
-                        <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat"
+                <div class=" searchBar">
+                    <div class="d-flex justify-content-center barra"><span class="input-group-text rounded-0"
+                            id="basic-addon1"><i class="fa-solid fa-magnifying-glass "></i></span>
+                        <input type="text" class="form-control rounded-0" placeholder="Cerca o inizia una nuova chat"
                             aria-label="Username" aria-describedby="basic-addon1">
                     </div>
 
 
                 </div>
-                <div class="chat"></div>
+
+                <div class="chatList">
+                    <div class="d-flex align-items-center ms-3">
+                        <img id="profileImg" src="./img/avatar_1.jpg" alt="">
+                        <span>Michele</span>
+
+                    </div>
+                </div>
 
             </div>
-            <div class="col-8">
-                <div class=" chat profile"></div>
+
+
+            <!-- right side -->
+            <div class="rightPage p-0">
+                <div class="chatProfile"></div>
                 <div class="containerChat "></div>
                 <div class=" writeBar "></div>
             </div>

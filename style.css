@@ -8,49 +8,45 @@ body {
 
 #container {
     border: 1px solid red;
-    width: 60vw;
-    height: 90vh;
+    width: 90vw;
+    height: 95vh;
     display: flex;
     justify-content: center;
 }
 
-.col-4,
-.col-8 {
-    border: 1px solid blue;
-}
+
 
 
 /* dashboard chat */
 
 
-.col-4 {
+.leftBar {
     background-color: white;
-    /* overflow-y: scroll; */
+    width: 40%;
 }
 
-.chat {
-    height: 50px;
-    border: 1px dashed black;
-}
+
 
 .search {
-    height: 30px;
-    border: 1px dashed black;
+    height: 20px;
+
 }
 
 .profile {
     background-color: #eaeaea;
     display: flex;
     justify-content: space-between;
+    height: 50px;
 }
-
 
 .sophiaProfile {
     display: flex;
     justify-content: space-between;
-    text-align: center;
-
+    align-items: center;
+    height: 50px;
 }
+
+
 
 .sophiaOption {
     cursor: pointer;
@@ -69,8 +65,6 @@ body {
     background-color: rgba(76, 169, 227, 0.564);
     display: flex;
     align-items: center;
-
-
 }
 
 
@@ -85,24 +79,45 @@ body {
 }
 
 .searchBar {
-    height: 20px;
+    height: 50px;
     width: 100%;
+    border: 1 px solid blue;
+    display: flex;
+
+}
+
+.barra {
+    display: flex;
+
+    padding: 10px;
+    width: 100%;
+
+}
+
+#profileImg {
+    border-radius: 50%;
+    height: 40px;
+
+}
+
+.chatList {
+    height: 50px;
+    border: 1px solid black;
 }
 
 
 /* right container */
-.col-8 {
-    background-image: url(./img/mine.jpg);
+.rightPage {
+    width: 60%;
 }
 
-.writeBar {
-    background-color: #f3eeea;
+.chatProfile {
     height: 50px;
-    margin-top: auto;
+    border: 1px solid black;
 }
 
 .containerChat {
     border: 1px solid black;
     height: calc(100% - 100px);
-
+    background-image: url(./img/mine.jpg);
 }
