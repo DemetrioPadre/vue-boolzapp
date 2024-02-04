@@ -7,7 +7,6 @@ body {
 }
 
 #container {
-
     width: 90vw;
     height: 95vh;
     display: flex;
@@ -118,6 +117,17 @@ body {
     height: 50px;
     border: 1px solid lightgrey;
     background-color: whitesmoke;
+    position: relative;
+    cursor: pointer;
+}
+
+.lastAccess {
+    font-size: 12px;
+    font-weight: bold;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+
 }
 
 
@@ -151,25 +161,36 @@ body {
     display: flex;
     flex-direction: column;
     padding: 20px;
+
 }
 
 /* parte dei messaggi */
 
 .leftMsg {
-
+    max-width: 70%;
+    min-width: 20%;
+    height: 50px;
+    display: flex;
+    align-self: flex-start;
+    align-items: center;
     background-color: white;
+
 }
 
 .rightMsg {
+    height: 50px;
+    max-width: 70%;
+    min-width: 20%;
+    display: flex;
+    align-self: flex-end;
+    align-items: center;
     background-color: greenyellow;
 }
 
 .leftMsg,
 .rightMsg {
     margin-left: 4px;
-    height: 40px;
-    width: 400px;
-    border-radius: 10px;
+    border-radius: 5px;
 
 }
 
