@@ -170,7 +170,7 @@ const app = createApp({
             newMessage: {
                 date: '',
                 message: '',
-                status: 'sent',
+                status: '',
             }
         };
 
@@ -203,6 +203,7 @@ const app = createApp({
             this.activeContact.messages.push(newMessage);
 
             setTimeout(this.sendAutomaticRisp, 1000);
+            this.newMessage.message = '';
         },
 
         sendAutomaticRisp() {
@@ -215,7 +216,7 @@ const app = createApp({
 
         getCurrentTime() {
             const now = new Date();
-            return `${now.getHours()} ${now.getMinutes()}`;
+            return `${now.getHours()}: ${now.getMinutes()}`;
 
 
         }
