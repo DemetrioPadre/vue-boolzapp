@@ -70,17 +70,20 @@
 
 
                 </div>
+                <div class="contacts">
+                    <div v-for="(contact, index) in contacts" class="chatList " @click="setActiveIndex(index)">
+                        <div class="d-flex align-items-center ms-3">
+                            <img id="profileImg" :src="contact.avatar" alt="">
+                            <span class="contactName ms-1">{{contact.name}}</span>
 
-                <div v-for="contact in contacts" class="chatList ">
-                    <div class="d-flex align-items-center ms-3">
-                        <img id="profileImg" :src="contact.avatar" alt="">
-                        <span class="contactName ms-1">{{contact.name}}</span>
-                        <small>messaggio</small>
-                        <span class="lastAccess">{{getLastAccessFromMessages(contact.messages)}}</span>
+                            <span class="lastAccess d-block">{{getLastAccessFromMessages(contact.messages)}}</span> <br>
+                            <div class=" d-block"><small>{{getLastAccessFromMessages(contact.messages)}}</small>
+                            </div>
+                        </div>
+
                     </div>
-
-
                 </div>
+
 
 
             </div>
@@ -93,12 +96,15 @@
                 <div class="headerChat">
 
                     <div class="d-flex align-items-center ms-3">
-                        <img id="profileImg" src="./img/avatar_1.jpg" alt="">
-                        <span class="ms-1">Michele</span>
-                        <span class="lastAccess">ultimo accesso oggi alle 12:00</span>
+                        <img id="profileImg" :src="activeContact.avatar" alt="">
+                        <span class="ms-1">{{activeContact.name}}</span> <br>
+                        <p class="time">ultimo accesso oggi
+                            alle{{getLastAccessFromMessages(contacts[activeIndex].messages)}}</p>
 
 
                     </div>
+
+
 
 
                     <div class="currentProfile me-3">
@@ -111,15 +117,18 @@
                 </div>
                 <!--  chat -->
                 <div class="containerChat ">
-                    <div class="leftMsg dropdown-toggle " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <div class="leftMsg  m-3" v-for="message in activeContact.messages" type="button" data-bs-toggle=""
+                        aria-expanded="false">
 
                         <div class=" align-items-center px-3">
-                            <p class="m-0">hai ricevuto il messaggio?</p>
+                            <p class="m-0">{{message.message}}</p>
+                            <p class="messageDate"> {{message.date}}</p>
                         </div>
                     </div>
-                    <div class="rightMsg">
-                        <div class=" align-items-center px-3">
-                            <p class="m-0">hai ricevuto il messaggio?</p>
+                    <div class="rightMsg m-3 " v-for="message in activeContact.messages" :class="message.status">
+                        <div class=" align-items-center px-3 ">
+                            <p class="m-0 ">{{message.message}}</p>
+                            <p class="messageDate"> {{message.date}}</p>
                         </div>
                     </div>
                 </div>
@@ -127,7 +136,8 @@
                 <div class="footerBar">
                     <div class="emoticon d-flex align-items-center"><span><i
                                 class="fa-regular fa-face-smile fa-lg"></i></span></div>
-                    <div class="writeBar d-flex align-content-center mt-2"><input type="text" class="form-control"
+                    <div class="writeBar d-flex align-content-center mt-2"><input v-model="newMessage.message"
+                            @keyUp.enter="sendMessage()" type="text" class="form-control"
                             placeholder="Scrivi un messaggio">
                     </div>
                     <div class="microphone d-flex align-items-center"><span><i

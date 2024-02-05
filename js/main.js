@@ -165,18 +165,62 @@ const app = createApp({
                         },
                     ],
                 },
-            ]
-        }; console.log(contacts);
+            ],
+            activeIndex: 0,
+            newMessage: {
+                date: '',
+                message: '',
+                status: 'sent',
+            }
+        };
+
+    },
+    computed: {
+        activeContact() {
+            return this.contacts[this.activeIndex];
+        },
     },
 
     methods: {
         getLastAccessFromMessages(messages) {
             const sentMessages = messages.filter((message) => message.status == 'sent');
-            const lastMessage = sentMessages[sentMessages.length - 1];
-            return lastMessage.date;
+            const lastMessage = sentMessages.at(-1);
+            return lastMessage ? lastMessage.date : '';
+        },
+        getLastMessageFromMessages(messages) {
+            const lastMessage = messages.at(-1);
+            return lastMessage ? lastMessage.message : '';
+        },
+        setActiveIndex(newIndex) {
+            this.activeIndex = newIndex;
+        },
+        sendMessage() {
+            const newMessage = { ...this.newMessage };
+
+            const now = new Date();
+            newMessage.date = this.getCurrentTime();
+
+            this.activeContact.messages.push(newMessage);
+
+            setTimeout(this.sendAutomaticRisp, 1000);
+        },
+
+        sendAutomaticRisp() {
+            const newMessage = { ... this.newMessage };
+            newMessage.message = 'va bene';
+            newMessage.date = this.getCurrentTime();
+            newMessage.status = 'received';
+            this.activeContact.messages.push(newMessage);
+        },
+
+        getCurrentTime() {
+            const now = new Date();
+            return `${now.getHours()} ${now.getMinutes()}`;
+
+
         }
 
-    }
+    },
 });
 
 app.mount('#app');
